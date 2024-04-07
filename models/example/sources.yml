@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: RAW_DATA
+    database: DEV  
+    schema: RAW_DATA  
+    tables:
+      - name: PRODUCTS
+      - name: SALES
+        columns:
+          - name: txn_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null      
